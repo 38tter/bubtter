@@ -10,21 +10,17 @@ function getRandom(){
   return Math.floor(Math.random());
 }
 
+/* test */
+
 function doConvert(obj, flg) {
   let set = "";
   for (let i=0;i<obj.length;i++){
-    if (i===obj.length-1){
-      for(let k=0;k<obj[i].innerText.length;k++){
-        if(obj[i].innerText[k].match(regMatchExp)){
-          set += obj[i].innerText[k];
-        }
+    for(let k=0;k<obj[i].innerText.length;k++){
+      if(obj[i].innerText[k].match(regMatchExp)){
+        set += obj[i].innerText[k];
       }
-    } else {
-      for(let k=0;k<obj[i].innerText.length;k++){
-        if(obj[i].innerText[k].match(regMatchExp)){
-          set += obj[i].innerText[k];
-        }
-      }
+    }
+    if (i!==obj.length-1){
       set += separateChar;
     }
   }

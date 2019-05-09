@@ -66,15 +66,6 @@ let youjiTxt = {
   "無駄":"無駄無駄無駄無駄無駄無駄"
 }
 
-// let closureFunc;
-// {
-//   let closureCnt = 0;
-//   closureFunc = function() {
-//     ++closureCnt;
-//     return closureCnt;
-//   }
-// }
-
 function parseXML(response) {
   return response.text().then((stringContainingXMLSource) => {
     const parser = new DOMParser();
